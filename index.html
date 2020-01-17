@@ -88,7 +88,7 @@
 
     <!-- START ABOUT -->
     <section id="about" class="home_bg"
-        style="background-image: url(assets/img/hero_bg.jpg); background-size:cover; background-position: center center;">
+        style="background-size:cover; background-position: center center;">
         <!--<a class="player" data-property="{videoURL:'https://youtu.be/wt1a9ZtUbp8',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0}"></a>-->
         <div class="herocontainer">
             <div class="container">
@@ -454,6 +454,24 @@
         ga('create', 'UA-105151200-1', 'auto');
         ga('send', 'pageview');
     </script>
+
+    <script>
+    var heroBG = [
+        '/assets/img/heroBG/1.jpg',
+        '/assets/img/heroBG/2.jpg',
+        '/assets/img/heroBG/3.jpg',
+        '/assets/img/heroBG/4.jpg',
+        '/assets/img/heroBG/5.jpg',
+        '/assets/img/heroBG/6.jpg',
+        '/assets/img/heroBG/7.jpg'
+      ];
+
+      var rand = heroBG[Math.floor(Math.random() * heroBG.length)];
+      var aboutBGelement = document.getElementById('about');
+      aboutBGelement.style.backgroundImage = 'url("' + rand + '")';
+
+    </script>
+
     <!-- Latest compiled and minified Bootstrap -->
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <!-- modernizer JS -->
@@ -466,7 +484,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>
     <!-- scripts js -->
     <script src="assets/js/post.js"></script>
-
 
 </body>
 
