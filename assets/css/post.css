@@ -1,0 +1,186 @@
+body {
+    background-color: #222;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.navbar-post img {
+    height: 100px;
+}
+
+nav {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.btn-home-bg {
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+#contact p,
+#contact h4 {
+    font-family: 'montserrat', sans-serif;
+}
+
+#contact {
+    background-color: #111;
+}
+
+#contact a,
+#contact p,
+#contact h4 {
+    color: #fff
+}
+
+.logo-mobile {
+    display: none !important;
+}
+
+@media only screen and (max-width: 991px) {
+
+    .logo-mobile {
+        display: block !important;
+    }
+
+    .logo-main {
+        display: none !important;
+    }
+}
+
+.post-logo {
+    filter: invert(0);
+    transition: filter 1s;
+}
+
+.logo-invert {
+    filter: invert(1);
+}
+
+.post-hero {
+    background-color: #ff0000;
+    padding: 10em 0;
+}
+
+.post-title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 0.1em;
+}
+
+.post-subtitle {
+    color: white;
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    margin: 0 0 0.2em 0;
+}
+
+p {
+    color: #fff;
+    line-height: 2em;
+    font-size: 0.8em;
+}
+
+.post-software {
+    width: 30px;
+    margin-right: 4px;
+    margin-bottom: 0.7em;
+}
+
+.disclaimer {
+    font-size: 0.8em;
+}
+
+.post-map {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.lightbox {
+    background-color: #111;
+    padding: 2em;
+}
+
+.post-hero-text {
+    padding-top: 250px;
+}
+
+.post-hero-text h2 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 8px;
+    line-height: 70px;
+    text-transform: uppercase;
+}
+
+.post-hero-text p {
+    color: #fff;
+    margin: auto auto 15px;
+    width: 60%;
+}
+
+.service-container {
+    background-color: #333;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5em 1em;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fff;
+    margin-bottom: 2em;
+    transition: 0.2s;
+}
+
+.service-container:hover {
+    box-shadow: 10px 10px 0 #00b2a9;
+    letter-spacing: 0.2em;
+}
+
+.fancybox-content {
+    padding: 0px;
+    background-color: inherit;
+}
+
+.contact_area {
+    padding-bottom: 1em;
+}
+
+.btn-view-reel {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid #e8e8e8;
+    border-radius: 100px;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 15px;
+    overflow: hidden;
+    padding: 8px 25px;
+    text-transform: uppercase;
+    transition: all 0.2s ease 0s;
+}
+
+.team-name {
+    font-family: 'Roboto Mono', monospace;
+    color: #fff;
+}
