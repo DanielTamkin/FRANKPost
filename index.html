@@ -40,6 +40,10 @@
     <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.css">
     <!-- FANCYBOX -->
     <link rel="stylesheet" href="assets/css/jquery.fancybox.css" />
+    <!-- slick CSS -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+     <!-- slick theme CSS -->
+     <link rel="stylesheet" href="assets/css/slick-theme.css">
     <!-- animate CSS -->
     <link rel="stylesheet" href="assets/css/animate.css">
     <!-- Style CSS -->
@@ -87,8 +91,7 @@
     <!-- END NAVBAR -->
 
     <!-- START ABOUT -->
-    <section id="about" class="home_bg"
-        style="background-position: center center;">
+    <section id="about" class="home_bg" style="background-position: center center;">
         <!--<a class="player" data-property="{videoURL:'https://youtu.be/wt1a9ZtUbp8',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0}"></a>-->
         <div class="herocontainer">
             <div class="container">
@@ -121,7 +124,10 @@
                 <div class="section-title about-text text-center wow zoomIn">
                     <h2>Our Team</h2>
                     <p>We have the best in the business on our Frank Digital team. Our dedicated professionals have the
-                        integrity, experience and flexibility to ensure your creative vision is met and your marketing objectives are achieved. We are creative and effective. Consultative and responsive. Socially-minded and business savvy. Quite frankly, we will exceed your expectations. And, we’re also a lot of fun!
+                        integrity, experience and flexibility to ensure your creative vision is met and your marketing
+                        objectives are achieved. We are creative and effective. Consultative and responsive.
+                        Socially-minded and business savvy. Quite frankly, we will exceed your expectations. And, we’re
+                        also a lot of fun!
                     </p>
                 </div>
                 <!--Bill-->
@@ -321,12 +327,20 @@
                             also provide Blu-ray & DVD encoding, traffic and Telecaster services, HD/SD closed
                             captioning & descriptive video.
                         </p>
-                        <a class=" btn btn-view-reel" data-fancybox href="https://youtu.be/sO38zaPc_jA">view demoreel</a>
+                        <a class=" btn btn-view-reel" data-fancybox href="https://youtu.be/sO38zaPc_jA">view
+                            demoreel</a>
                         </a>
                         <br>
                     </div>
                     <div class="col-md-6">
-                        <img class="img-responsive" src="assets/img/facilities/avid_a_suite.jpg">
+                        <div class="your-class">
+                            <div class="test"><img class="img-responsive" src="assets/img/facilities/avid_a_suite.jpg">
+                            </div>
+                            <div class="test"><img class="img-responsive" src="assets/img/facilities/colour_suite.jpg">
+                            </div>
+                            <div class="test"><img class="img-responsive" src="assets/img/facilities/colour_suite_2.jpg">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -448,20 +462,19 @@
     </script>
 
     <script>
-    var heroBG = [
-        '/assets/img/heroBG/1.jpg',
-        '/assets/img/heroBG/2.jpg',
-        '/assets/img/heroBG/3.jpg',
-        '/assets/img/heroBG/4.jpg',
-        '/assets/img/heroBG/5.jpg',
-        '/assets/img/heroBG/6.jpg',
-        '/assets/img/heroBG/7.jpg'
-      ];
+        var heroBG = [
+            '/assets/img/heroBG/1.jpg',
+            '/assets/img/heroBG/2.jpg',
+            '/assets/img/heroBG/3.jpg',
+            '/assets/img/heroBG/4.jpg',
+            '/assets/img/heroBG/5.jpg',
+            '/assets/img/heroBG/6.jpg',
+            '/assets/img/heroBG/7.jpg'
+        ];
 
-      var rand = heroBG[Math.floor(Math.random() * heroBG.length)];
-      var aboutBGelement = document.getElementById('about');
-      aboutBGelement.style.backgroundImage = 'url("' + rand + '")';
-
+        var rand = heroBG[Math.floor(Math.random() * heroBG.length)];
+        var aboutBGelement = document.getElementById('about');
+        aboutBGelement.style.backgroundImage = 'url("' + rand + '")';
     </script>
 
     <!-- Latest compiled and minified Bootstrap -->
@@ -472,6 +485,13 @@
     <script src="assets/js/wow.min.js"></script>
     <!-- jquery FANCYBOX min js -->
     <script src="assets/js/jquery.fancybox.min.js"></script>
+    <!-- glider js -->
+    <script src="assets/js/slick.min.js"></script>
+    <script>
+        $(document).on("click", "a", function(){
+        $('.your-class').slick({});
+        });
+    </script>
     <!--Maps ID-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>
     <!-- scripts js -->
