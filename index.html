@@ -12,7 +12,6 @@
     <meta name="keywords"
         content="Video Production, Animation, Corporate Video, Commercials, Story Telling, TV, Television, Development, Documentary, Motion Graphics, Full Service Video, VFX, Post Production, Original Series, Winnipeg, Manitoba, Canadian, Western Canada">
     <meta name="description" content="">
-    <meta name="author" content="">
     <!--favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
@@ -35,9 +34,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <!--- owl carousel Css-->
-    <link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.css">
     <!-- FANCYBOX -->
     <link rel="stylesheet" href="assets/css/jquery.fancybox.css" />
     <!-- slick CSS -->
@@ -72,7 +68,7 @@
                 <a href="index.html" class="navbar-brand navbar-post">
                     <img src="assets/img/Frank_Post_Logo.svg" class="post-logo logo-main logo-white"
                         alt="FRANK Digital">
-                    <img src="assets/img/Frank_Post_Logo_Mobile.svg" class="post-logo logo-mobile"
+                    <img src="assets/img/Frank_Post_Logo_Mobile.svg" class="post-logo logo-mobile logo-white"
                         alt="FRANK Digital"></a>
             </div>
             <div class="navbar-collapse collapse">
@@ -118,10 +114,10 @@
 
     <!-- START TEAM  -->
 
-    <section id="team" class="app-screenshot section-padding">
+    <section id="team" class="app-screenshot section-padding wow zoomIn">
         <div class="container">
             <div class="row">
-                <div class="section-title about-text text-center wow zoomIn">
+                <div class="section-title about-text text-center">
                     <h2>Our Team</h2>
                     <p>We have the best in the business on our Frank Digital team. Our dedicated professionals have the
                         integrity, experience and flexibility to ensure your creative vision is met and your marketing
@@ -243,10 +239,10 @@
 
     <!--START SERVICES-->
 
-    <section id="services" class="app-screenshot section-padding">
+    <section id="services" class="app-screenshot section-padding wow zoomIn">
         <div class="container">
             <div class="row">
-                <div class="section-title about-text text-center wow zoomIn">
+                <div class="section-title about-text text-center">
                     <h2>Our Services</h2>
                     <p>We are Manitoba’s most comprehensive, fully-HD production house with more than 7,500 square feet
                         of audio and video post-production facilities. We provide services for international film
@@ -333,7 +329,7 @@
                         <br>
                     </div>
                     <div class="col-md-6">
-                        <div class="your-class">
+                        <div class="slider">
                             <div class="test"><img class="img-responsive" src="assets/img/facilities/avid_a_suite.jpg">
                             </div>
                             <div class="test"><img class="img-responsive" src="assets/img/facilities/colour_suite.jpg">
@@ -373,7 +369,7 @@
                         <div class="single_promotion">
                             <i class="fa fa-envelope"></i>
                             <h4>Send your message</h4>
-                            <a href="mailto:info@frankdigital.ca">Info@frankdigital.ca</a>
+                            <a href="mailto:info@frankdigital.ca"><p>Info@frankdigital.ca</p></a>
                         </div>
                     </div>
                     <!-- END COL -->
@@ -438,12 +434,6 @@
     <!-- Latest jQuery -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
 
-    <!--Disconnect this on production build-->
-    <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
-    <script type="text/javascript">
-        $('.player').mb_YTPlayer();
-    </script>
-
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -462,19 +452,7 @@
     </script>
 
     <script>
-        var heroBG = [
-            '/assets/img/heroBG/1.jpg',
-            '/assets/img/heroBG/2.jpg',
-            '/assets/img/heroBG/3.jpg',
-            '/assets/img/heroBG/4.jpg',
-            '/assets/img/heroBG/5.jpg',
-            '/assets/img/heroBG/6.jpg',
-            '/assets/img/heroBG/7.jpg'
-        ];
-
-        var rand = heroBG[Math.floor(Math.random() * heroBG.length)];
-        var aboutBGelement = document.getElementById('about');
-        aboutBGelement.style.backgroundImage = 'url("' + rand + '")';
+       
     </script>
 
     <!-- Latest compiled and minified Bootstrap -->
@@ -487,11 +465,6 @@
     <script src="assets/js/jquery.fancybox.min.js"></script>
     <!-- glider js -->
     <script src="assets/js/slick.min.js"></script>
-    <script>
-        $(document).on("click", "a", function(){
-        $('.your-class').slick({});
-        });
-    </script>
     <!--Maps ID-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>
     <!-- scripts js -->

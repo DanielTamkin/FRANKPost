@@ -27,9 +27,7 @@ nav {
 }
 
 #contact p,
-#contact h4 {
-    font-family: 'montserrat', sans-serif;
-}
+#contact h4 {}
 
 #contact {
     background-color: #111;
@@ -61,14 +59,25 @@ nav {
     transition: filter 1s;
 }
 
+.post-hero {
+    padding: 10em 0;
+}
+
+.logo-white {
+    filter: invert(0);
+}
+
+@media only screen and (max-width: 767px) {
+
+    .logo-white {
+        filter: invert(1);
+    }
+}
+
 .logo-invert {
     filter: invert(1);
 }
 
-.post-hero {
-    background-color: #ff0000;
-    padding: 10em 0;
-}
 
 .post-title {
     color: white;
@@ -99,7 +108,7 @@ p {
 }
 
 .disclaimer {
-    font-size: 0.8em;
+    font-size: 0.6em;
 }
 
 .post-map {
@@ -168,9 +177,9 @@ p {
 
 .btn-view-reel {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border: 1px solid #e8e8e8;
+    border: 2px solid #e8e8e8;
     border-radius: 100px;
-    color: #fff;
+    color: #fff !important;
     display: inline-block;
     font-size: 13px;
     margin-top: 15px;
@@ -178,6 +187,12 @@ p {
     padding: 8px 25px;
     text-transform: uppercase;
     transition: all 0.2s ease 0s;
+}
+
+.btn-view-reel:hover {
+    background-color: #00b2a9;
+    color: #fff;
+    border: 2px solid #00b2a9;
 }
 
 .team-name {
