@@ -84,7 +84,7 @@
 				{
 					scrollTop: $(anchor.attr('href')).offset().top - 130
 				},
-				1500
+				1000
 			);
 			e.preventDefault();
 		});

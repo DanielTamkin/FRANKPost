@@ -142,8 +142,11 @@ p {
 	transition: 0.4s;
 }
 
+.services-padding {
+    padding-bottom: 60px;
+}
+
 .service-container:hover {
-	box-shadow: none;
 	background-color: #00b2a9;
 	letter-spacing: 0.2em;
 }
