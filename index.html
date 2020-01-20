@@ -29,19 +29,15 @@
     <!-- Latest Bootstrap min CSS -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i|Montserrat:400,700"
-        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <!-- FANCYBOX -->
+    <!-- FANCYBOX CSS -->
     <link rel="stylesheet" href="assets/css/jquery.fancybox.css" />
     <!-- slick CSS -->
     <link rel="stylesheet" href="assets/css/slick.css">
     <!-- slick theme CSS -->
     <link rel="stylesheet" href="assets/css/slick-theme.css">
-    <!-- animate CSS -->
-    <link rel="stylesheet" href="assets/css/animate.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Post CSS -->
@@ -87,8 +83,7 @@
     <!-- END NAVBAR -->
 
     <!-- START ABOUT -->
-    <section id="about" class="home_bg" style="background-position: center center;">
-        <!--<a class="player" data-property="{videoURL:'https://youtu.be/wt1a9ZtUbp8',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0}"></a>-->
+    <section id="about" class="home_bg" style="background-position: center center; background-size: cover;">
         <div class="herocontainer">
             <div class="container">
                 <div class="row">
@@ -98,7 +93,6 @@
                             <p>We’re post-production wizards. Colour and sound are our obsession. Our post facility is
                                 state-of-the-art and our team is one of the most talented in the business. Regardless of
                                 your budget or the size of your production, we’re ready to take on your project.</p>
-                            <!--<a class="btn btn-default btn-home-bg " data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/embed/RS3XkmG73tQ?rel=0&amp;showinfo=0">View Reel</a>-->
                             <a class="btn btn-default btn-home-bg page-scroll test" href="#team">Continue</a>
                         </div>
                     </div>
@@ -114,7 +108,7 @@
 
     <!-- START TEAM  -->
 
-    <section id="team" class="app-screenshot section-padding wow zoomIn">
+    <section id="team" class="app-screenshot section-padding">
         <div class="container">
             <div class="row">
                 <div class="section-title about-text text-center">
@@ -239,7 +233,7 @@
 
     <!--START SERVICES-->
 
-    <section id="services" class="app-screenshot section-padding wow zoomIn">
+    <section id="services" class="app-screenshot section-padding-top">
         <div class="container">
             <div class="row">
                 <div class="section-title about-text text-center">
@@ -252,7 +246,7 @@
                 </div>
 
                 <div class="row">
-                    <a data-fancybox data-src="#editorial" href="javascript:;">
+                    <a data-fancybox data-src="#editorial" data-touch='false' href="javascript:;">
                         <div class="col-md-4 col-sm-6">
                             <div class="service-container">
                                 <div class="service-button">EDITORIAL</div>
@@ -326,7 +320,6 @@
                         <a class=" btn btn-view-reel" data-fancybox href="https://youtu.be/sO38zaPc_jA">view
                             demoreel</a>
                         </a>
-                        <br>
                     </div>
                     <div class="col-md-6">
                         <div class="slider">
@@ -435,40 +428,14 @@
     <!-- END FOOTER -->
     <!-- Latest jQuery -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
-
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-105151200-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-
-    <script>
-
-    </script>
-
     <!-- Latest compiled and minified Bootstrap -->
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <!-- modernizer JS -->
     <script src="assets/js/modernizr-2.8.3.min.js"></script>
-    <!-- WOW - Reveal Animations When You Scroll -->
-    <script src="assets/js/wow.min.js"></script>
     <!-- jquery FANCYBOX min js -->
     <script src="assets/js/jquery.fancybox.min.js"></script>
-    <!-- glider js -->
+    <!-- slick js -->
     <script src="assets/js/slick.min.js"></script>
-    <!--Maps ID-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>
     <!-- scripts js -->
     <script src="assets/js/post.js"></script>
 

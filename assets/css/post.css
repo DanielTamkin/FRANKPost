@@ -1,5 +1,5 @@
 body {
-    background-color: #222;
+	background-color: #222;
 }
 
 h1,
@@ -9,205 +9,195 @@ h4,
 h5,
 p,
 a {
-    font-family: 'Roboto Mono', monospace;
+	font-family: 'Roboto Mono', monospace;
 }
 
 .navbar-post img {
-    height: 100px;
+	height: 100px;
 }
 
 nav {
-    font-family: 'Roboto Mono', monospace;
+	font-family: 'Roboto Mono', monospace;
 }
 
 .btn-home-bg {
-    font-family: 'Roboto Mono', monospace;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
+	font-family: 'Roboto Mono', monospace;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
 }
 
 #contact {
-    background-color: #111;
+	background-color: #111;
 }
 
 #contact a,
 #contact p,
 #contact h4 {
-    color: #fff
+	color: #fff;
 }
 
 .logo-mobile {
-    display: none !important;
+	display: none !important;
 }
 
 @media only screen and (max-width: 991px) {
+	.logo-mobile {
+		display: block !important;
+	}
 
-    .logo-mobile {
-        display: block !important;
-    }
-
-    .logo-main {
-        display: none !important;
-    }
-}
-
-.post-logo {
-    filter: invert(0);
-    transition: filter 1s;
+	.logo-main {
+		display: none !important;
+	}
 }
 
 .post-hero {
-    padding: 10em 0;
+	padding: 10em 0;
 }
-
-.logo-white {
-    filter: invert(0);
-}
-
-@media only screen and (max-width: 767px) {
-
-    .logo-white {
-        filter: invert(1);
-    }
-}
-
-.logo-invert {
-    filter: invert(1);
-}
-
 
 .post-title {
-    color: white;
-    text-transform: uppercase;
-    font-size: 3em;
-    letter-spacing: 0.1em;
+	color: white;
+	text-transform: uppercase;
+	font-size: 3em;
+	letter-spacing: 0.1em;
 }
 
 .post-subtitle {
-    color: white;
-    text-transform: uppercase;
-    font-size: 3em;
-    letter-spacing: 0.1em;
-    font-weight: 400;
-    margin: 0 0 0.2em 0;
+	color: white;
+	text-transform: uppercase;
+	font-size: 3em;
+	letter-spacing: 0.1em;
+	font-weight: 600;
+	margin: 0 0 0.2em 0;
 }
 
 p {
-    color: #fff;
-    line-height: 2em;
-    font-size: 0.8em;
+	color: #fff;
+	line-height: 2em;
+	font-size: 0.8em;
 }
 
 .post-software {
-    width: 30px;
-    margin-right: 4px;
-    margin-bottom: 0.7em;
+	width: 30px;
+	margin-right: 4px;
+	margin-bottom: 0.7em;
 }
 
 .disclaimer {
-    font-size: 0.6em;
+	font-size: 0.6em;
+}
+
+@media only screen and (max-width: 767px) {
+	.disclaimer {
+		text-align: center;
+	}
 }
 
 .post-map {
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
 }
 
 .hidden {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 .lightbox {
-    background-color: #111;
-    padding: 2em;
+	background-color: #111;
+	padding: 2em;
 }
 
 .post-hero-text {
-    padding-top: 250px;
+	padding: 200px 0;
 }
 
 .post-hero-text h2 {
-    color: #fff;
-    font-size: 50px;
-    font-weight: 800;
-    letter-spacing: 8px;
-    line-height: 70px;
-    text-transform: uppercase;
+	color: #fff;
+	font-size: 50px;
+	font-weight: 800;
+	letter-spacing: 8px;
+	line-height: 70px;
+	text-transform: uppercase;
 }
 
 .post-hero-text p {
-    color: #fff;
-    margin: auto auto 15px;
-    width: 60%;
+	color: #fff;
+	margin: auto auto 15px;
+	width: 60%;
 }
 
 .service-container {
-    background-color: #333;
-    text-align: center;
-    vertical-align: middle;
-    padding: 5em 1em;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #fff;
-    margin-bottom: 2em;
-    transition: 0.2s;
+	background-color: #333;
+	text-align: center;
+	vertical-align: middle;
+	padding: 5em 1em;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #fff;
+	margin-bottom: 2em;
+	transition: 0.4s;
 }
 
 .service-container:hover {
-    box-shadow: 10px 10px 0 #00b2a9;
-    letter-spacing: 0.2em;
+	box-shadow: none;
+	background-color: #00b2a9;
+	letter-spacing: 0.2em;
 }
 
 .fancybox-content {
-    padding: 0px;
-    background-color: inherit;
+	padding: 0px;
+	background-color: inherit;
 }
 
 .contact_area {
-    padding-bottom: 1em;
+	padding-bottom: 1em;
 }
 
 .btn-view-reel {
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border: 2px solid #e8e8e8;
-    border-radius: 100px;
-    color: #fff !important;
-    display: inline-block;
-    font-size: 13px;
-    margin-top: 15px;
-    overflow: hidden;
-    padding: 8px 25px;
-    text-transform: uppercase;
-    transition: all 0.2s ease 0s;
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+	border: 2px solid #e8e8e8;
+	border-radius: 100px;
+	color: #fff !important;
+	display: inline-block;
+	font-size: 13px;
+	margin-top: 15px;
+	overflow: hidden;
+	padding: 8px 25px;
+	text-transform: uppercase;
+	transition: all 0.4s ease 0s;
+	margin-bottom: 1.5em;
 }
 
 .btn-view-reel:hover {
-    background-color: #00b2a9;
-    color: #fff;
-    border: 2px solid #00b2a9;
+	background-color: #00b2a9;
+	color: #fff;
+	border: 2px solid #00b2a9;
 }
 
 .team-name {
-    font-family: 'Roboto Mono', monospace;
-    color: #fff;
+	font-family: 'Roboto Mono', monospace;
+	color: #fff;
 }
 
 .about-text h2 {
-    color: #fff;
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    line-height: 70px;
-    text-transform: uppercase;
+	color: #fff;
+	font-size: 60px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	line-height: 70px;
+	text-transform: uppercase;
 }
 
 .section-title h2 {
-    font-weight: 800;
-    font-size: 30px;
-    letter-spacing: 0.25em;
+	font-weight: 800;
+	font-size: 30px;
+	letter-spacing: 0.25em;
+}
+
+.slick-slide:focus {
+	outline: none;
 }
