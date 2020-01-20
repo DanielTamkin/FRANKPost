@@ -61,15 +61,6 @@ nav {
 	letter-spacing: 0.1em;
 }
 
-.post-subtitle {
-	color: white;
-	text-transform: uppercase;
-	font-size: 3em;
-	letter-spacing: 0.1em;
-	font-weight: 600;
-	margin: 0 0 0.2em 0;
-}
-
 p {
 	color: #fff;
 	line-height: 2em;
@@ -203,4 +194,20 @@ p {
 
 .slick-slide:focus {
 	outline: none;
+}
+
+.modal-title {
+	color: white;
+	text-transform: uppercase;
+	font-size: 3em;
+	letter-spacing: 0.1em;
+	font-weight: 600;
+}
+
+.modal-subtitle {
+	color: white;
+	font-size: 1em;
+	letter-spacing: 0.1em;
+	font-weight: 600;
+	margin: 0 0 1em 0;
 }
