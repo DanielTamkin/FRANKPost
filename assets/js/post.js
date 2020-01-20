@@ -110,13 +110,13 @@
 	// ——————————————————————————————————————————————————
 
 	var heroBG = [
-		'../assets/img/heroBG/1.jpg',
-		'../assets/img/heroBG/2.jpg',
-		'../assets/img/heroBG/3.jpg',
-		'../assets/img/heroBG/4.jpg',
-		'../assets/img/heroBG/5.jpg',
-		'../assets/img/heroBG/6.jpg',
-		'../assets/img/heroBG/7.jpg'
+		'assets/img/heroBG/1.jpg',
+		'assets/img/heroBG/2.jpg',
+		'assets/img/heroBG/3.jpg',
+		'assets/img/heroBG/4.jpg',
+		'assets/img/heroBG/5.jpg',
+		'assets/img/heroBG/6.jpg',
+		'assets/img/heroBG/7.jpg'
 	];
 
 	var rand = heroBG[Math.floor(Math.random() * heroBG.length)];
