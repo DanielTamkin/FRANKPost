@@ -131,7 +131,8 @@
 		$('.slider').slick({
 			autoplay: true,
       autoplaySpeed: 5000,
-      dots: true
+      dots: true,
+      arrows: false
 		});
 	});
 })(jQuery);
