@@ -1,3 +1,3 @@
 # FRANKPost
 
-Work in progress version of frankpost.ca
+Work in progress build of frankpost.ca
