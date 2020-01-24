@@ -136,6 +136,7 @@ li {
 		margin-left: 10px;
 		margin-top: -25px;
 	}
+	}
 	.navbar-default.menu-top li a {
 		color: #fff !important;
 	}
@@ -206,8 +207,6 @@ li {
 	font-size: 2.5em;
 }
 
-/* NEW*/
-
 .navbar-toggle {
 	position: relative;
 	float: right;
@@ -227,7 +226,6 @@ li {
 .navbar-toggle:focus {
     background-color: #000 !important;
 }
-/*END NEW*/
 
 .col-xs-5ths,
 .col-sm-5ths,
