@@ -214,3 +214,7 @@ p {
 	font-weight: 600;
 	margin: 0 0 1em 0;
 }
+
+.buffer {
+	height: 60px;
+}
