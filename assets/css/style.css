@@ -331,6 +331,10 @@ li {
 	border-radius: 100%;
 }
 
+.full {
+	margin-bottom: 2em;
+}
+
 @media only screen and (max-width: 767px) {
 	.team-thumbnail img {
 		width: 100%;
@@ -412,7 +416,7 @@ li {
 }
 
 .brleading {
-	line-height: 1.3em;
+	line-height: 1.4em;
 }
 /*START CONTACT ADDRESS*/
 

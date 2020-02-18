@@ -216,5 +216,13 @@ p {
 }
 
 .buffer {
-	height: 60px;
+	height: 130px;
+}
+
+.small-c {
+	text-transform: lowercase;
+}
+
+.team-leading {
+	height: 10px;
 }
