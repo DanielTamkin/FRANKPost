@@ -430,10 +430,13 @@ li {
 	color: #00b2a9;
 	float: left;
 	font-size: 24px;
-	margin-bottom: 100px;
-	margin-right: 20px;
+	margin: 0 20px 100px 0;
 	-webkit-transition: all 0.2s ease 0s;
 	transition: all 0.2s ease 0s;
+}
+
+.single_promotion .socialicon {
+	margin-top: 0.1em;
 }
 
 .single_promotion h4 {
@@ -443,6 +446,7 @@ li {
 	text-transform: uppercase;
 	-webkit-transition: all 0.2s ease 0s;
 	transition: all 0.2s ease 0s;
+	margin-bottom: 1.5em;
 }
 
 .single_promotion p {

@@ -149,7 +149,7 @@ p {
 }
 
 .contact_area {
-	padding-bottom: 1em;
+	padding-bottom: 2.1em;
 }
 
 .btn-view-reel {
@@ -225,4 +225,13 @@ p {
 
 .team-leading {
 	height: 10px;
+}
+
+.single_promotion i {
+color: #fff;
+margin-bottom: 0;
+}
+
+.single_promotion i:hover {
+	color: #00b2a9;
 }
