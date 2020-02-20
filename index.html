@@ -88,7 +88,7 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12 text-center">
                         <div class="post-hero-text">
-                            <h2 id="post-hero-glitch" class="post-hero-glitch"></h2>
+                            <h2 id="post-hero-glitch" class="post-hero-glitch glitch">Post Services</h2>
                             <p>We’re post-production wizards. Colour and sound are our obsession. Our post facility is state-of-the-art and our team is one of the most talented in the business. Regardless of your budget or the size of your production, we’re ready to take on your project.</p>
                             <a class="btn btn-default btn-home-bg page-scroll test" href="#team">Continue</a>
                         </div>
@@ -109,7 +109,7 @@
         <div class="container">
             <div class="row">
                 <div class="section-title about-text text-center">
-                    <h2>Our Team</h2>
+                    <h2 class="glitch">Our Team</h2>
                     <p>We have the best in the business on our Frank Digital team. Our dedicated professionals have the integrity, experience and flexibility to ensure your creative vision is met. We are creative and effective. Consultative and responsive. Quite frankly, we will exceed your expectations. And, we’re also a lot of fun!
                     </p>
                 </div>
@@ -748,6 +748,7 @@
     <script src="assets/js/jquery.fancybox.min.js"></script>
     <!-- slick js -->
     <script src="assets/js/slick.min.js"></script>
+
     <!--init slick-->
         <script>
             $(document).on('click', 'a', function() {
@@ -760,9 +761,14 @@
             });
         </script>
     <!-- glitch js -->
-    <script src="assets/js/glitch.js"></script>
+    <script src="assets/js/shuffle-text.min.js"></script>
+    <script>
+    var text = new ShuffleText(document.querySelector('.glitch'));
+    text.start();
+    </script>
     <!-- scripts js -->
     <script src="assets/js/post.js"></script>
+    
 
 </body>
 
