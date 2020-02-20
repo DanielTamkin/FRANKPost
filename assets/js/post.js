@@ -1,18 +1,15 @@
-(function($) {
+(function ($) {
 	'use strict';
 
 	// ——————————————————————————————————————————————————
 	// Smooth Scroll / Menu Controller
 	// ——————————————————————————————————————————————————
 
-	jQuery(document).on('ready', function() {
-
-		
-
+	jQuery(document).on('ready', function () {
 
 		/*START MENU JS*/
-		$('a.page-scroll').on('click', function(e) {
-		if ($(window).width() >= 991) { var buffer = 130 } else { var buffer = 62}
+		$('a.page-scroll').on('click', function (e) {
+			if ($(window).width() >= 991) { var buffer = 130 } else { var buffer = 62 }
 			var anchor = $(this);
 			$('html, body').stop().animate(
 				{
@@ -23,7 +20,7 @@
 			e.preventDefault();
 		});
 
-		$(window).on('scroll', function() {
+		$(window).on('scroll', function () {
 			if ($(this).scrollTop() > 100) {
 				$('.menu-top').addClass('menu-shrink');
 			} else {
@@ -31,7 +28,7 @@
 			}
 		});
 
-		$(document).on('click', '.navbar-collapse.in', function(e) {
+		$(document).on('click', '.navbar-collapse.in', function (e) {
 			if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
 				$(this).collapse('hide');
 			}
