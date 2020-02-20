@@ -130,12 +130,16 @@ li {
 @media only screen and (max-width: 767px) {
 	.navbar-brand img {
 		margin-left: 10px;
-		margin-top: -25px;
-	}
+		margin-top: -22px;
 	}
 	.navbar-default.menu-top li a {
 		color: #fff !important;
 	}
+
+	.navbar-default {
+		padding: 10px 0 8px 0;
+	}
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -171,13 +175,13 @@ li {
 	}
 	.navbar-default .navbar-collapse {
 		margin: 0;
-		margin-top: 30px;
+		margin-top: 20px;
 	}
+	
 }
 
 @media only screen and (max-width: 480px) {
 	.menu-top {
-		background-color: #000;
 		color: #fff !important;
 		margin-left: 0px;
 	}
@@ -197,7 +201,7 @@ li {
 
 @media only screen and (max-width: 991px) {
 	.navbar-default.menu-shrink {
-		padding: 10px 0 4px 0;
+		padding: 10px 0 8px 0;
 	}
 }
 
@@ -338,6 +342,10 @@ li {
 @media only screen and (max-width: 767px) {
 	.team-thumbnail img {
 		width: 100%;
+	}
+
+	.post-hero-text {
+		padding: 100px 0 !important;
 	}
 }
 
