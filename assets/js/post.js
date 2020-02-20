@@ -7,12 +7,12 @@
 
 	jQuery(document).on('ready', function() {
 
-		var win = $(this);
-		if (win.width() >= 991) { var buffer = 130 } else { var buffer = 62}
+		
 
 
 		/*START MENU JS*/
 		$('a.page-scroll').on('click', function(e) {
+		if ($(window).width() >= 991) { var buffer = 130 } else { var buffer = 62}
 			var anchor = $(this);
 			$('html, body').stop().animate(
 				{
