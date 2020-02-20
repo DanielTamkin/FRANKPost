@@ -35,21 +35,21 @@
 	});
 
 	// ——————————————————————————————————————————————————
-	// Random Hero Image (inspired by jadnco)
+	// Hero Slideshow
 	// ——————————————————————————————————————————————————
-
-	var heroBG = [
-		'assets/img/heroBG/1.jpg',
-		'assets/img/heroBG/2.jpg',
-		'assets/img/heroBG/3.jpg',
-		'assets/img/heroBG/4.jpg',
-		'assets/img/heroBG/5.jpg',
-		'assets/img/heroBG/6.jpg',
-		'assets/img/heroBG/7.jpg'
-	];
-
-	var rand = heroBG[Math.floor(Math.random() * heroBG.length)];
-	var aboutBGelement = document.getElementById('about');
-	aboutBGelement.style.backgroundImage = 'url("' + rand + '")';
+	$(".home_bg").backgroundSlideshow({
+		delay: 3000,
+		transitionDuration: 1000,
+		images: [
+			"../assets/img/heroBG/1.jpg",
+			"../assets/img/heroBG/2.jpg",
+			"../assets/img/heroBG/3.jpg",
+			"../assets/img/heroBG/4.jpg",
+			"../assets/img/heroBG/5.jpg",
+			"../assets/img/heroBG/6.jpg",
+			"../assets/img/heroBG/7.jpg",
+		]
+	})
 
 })(jQuery);
+
