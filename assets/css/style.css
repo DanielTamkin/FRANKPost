@@ -427,16 +427,10 @@ li {
 }
 
 .single_promotion i {
-	color: #00b2a9;
 	float: left;
-	font-size: 24px;
-	margin: 0 20px 100px 0;
+	font-size: 22px;
 	-webkit-transition: all 0.2s ease 0s;
 	transition: all 0.2s ease 0s;
-}
-
-.single_promotion .socialicon {
-	margin-top: 0.1em;
 }
 
 .single_promotion h4 {
@@ -446,7 +440,6 @@ li {
 	text-transform: uppercase;
 	-webkit-transition: all 0.2s ease 0s;
 	transition: all 0.2s ease 0s;
-	margin-bottom: 1.5em;
 }
 
 .single_promotion p {
@@ -495,7 +488,7 @@ li {
 	text-align: center;
 	-webkit-transition: all 0.2s ease 0s;
 	transition: all 0.2s ease 0s;
-	width: 48px;
+	width: 35px;
 }
 
 .footer_social ul li a:hover {

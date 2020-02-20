@@ -82,6 +82,21 @@ p {
 	.disclaimer {
 		text-align: center;
 	}
+	.copyright {
+		text-align: center;
+	}
+
+	.single_promotion {
+		margin-bottom: 1em;
+	}
+
+	.single_promotion h4 {
+		margin-bottom: 0.1em;
+	}
+
+	.single_promotion .social {
+		margin-bottom: 0.5em;
+	}
 }
 
 .hidden {
@@ -227,3 +242,5 @@ margin-bottom: 0;
 .single_promotion i:hover {
 	color: #00b2a9;
 }
+
+.socialicon: width: 10px;
