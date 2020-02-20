@@ -6,12 +6,17 @@
 	// ——————————————————————————————————————————————————
 
 	jQuery(document).on('ready', function() {
+
+		var win = $(this);
+		if (win.width() >= 991) { var buffer = 130 } else { var buffer = 62}
+
+
 		/*START MENU JS*/
 		$('a.page-scroll').on('click', function(e) {
 			var anchor = $(this);
 			$('html, body').stop().animate(
 				{
-					scrollTop: $(anchor.attr('href')).offset().top - 130
+					scrollTop: $(anchor.attr('href')).offset().top - buffer
 				},
 				1000
 			);
