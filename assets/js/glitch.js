@@ -1,177 +1,147 @@
 (function($) {
-	// 'use strict';
+	/**
+	 * Animates element text.
 
-	String.prototype.replaceAt=function(index, replacement) {
-		return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
-	}
+	$.fn.glitch = function(options) {
+		/**
+		 * Itterate over each instance.
+		 * @param  {Object}                key     Relative to the element assignment
+		 * @param  {Object}                element The current Element assigned
+		 * @return {[type]}                        [description]
+		 */
+		return this.each(function(key, element) {
+			let settings = $.extend({
+					// These are the defaults.
+					done: function(){console.log('done!');},
+					backgroundColor: "white"
+			}, options );
+			let dfd = $.Deferred();
 
-
-	$.fn.glitch = function() {
-		return this.each(function(key, value) {
+			// Prevent any collisions with context function context
 			let that = '';
-			class TextScramble {
-				constructor(element) {
-					this.randChars = [];
-					this.element = element;
-					this.chars = '!<>-_\\/[]{}—=+*^?#________';
-					this.update = this.update.bind(this);
-					this.initalizeChars();
-					this.randCurrent = 0;
-					that = this;
-				}
-				initalizeChars(){
-					this.charOriginal = this.element.text();
-					let charSize = this.charOriginal.length;
-					for (let index = 0; index < charSize; index++) {
-						this.randChars[index] = this.randomChar();
-					}
-					
-				}
-				randCharsOutput(){
-					return this.randChars.join("");
-				}
-				update(){
-					if(this.randCurrent <= this.randChars.length){
-						this.randCurrent++;
-						return this.randChars[this.randCurrent];
-					}
-					else{
-						// do nothing
-					}
-					
-				}
-
-				animateChar(location,parentCallback){
-
-					function setCharAt(str,index,chr) {
-						if(index > str.length-1) return str;
-						return str.substr(0,index) + chr + str.substr(index+1);
-					}
-					async function animateStop(timer,callback){
-						await clearTimeout(timer);
-
-
-						await cancelAnimationFrame(animate);
-						await callback();
-					}
-					let frameCount = 0;
-					let frameMax = Math.floor(Math.random() * 40) + 10;
-					// console.log("Time difference: ",baseline);
-					let count = 0;
-					function animate(){
-						function animateCharNow(){
-							if(frameCount >= frameMax){
-
-
-								
-								// console.log("DONE");
-								// count += 1;
-	
-								animateStop(timer,function(){
-									console.log('what');
-									that.element.text(
-										setCharAt(
-											currentText,location,
-											that.charOriginal.charAt(location))
-										);
-								});
-							}
-							else{
-								requestAnimationFrame(animate);
-								frameCount += 1;
-							}
-						}
-						//console.log('Happening');
-						let currentText = that.element.text();
-						that.element.text(setCharAt(currentText,location,that.randomChar()));
-						let fps = 60;
-						
-						let timer =  setTimeout(animateCharNow, 1000 / fps);
-					}
-
-					
-
-					if(!(location > this.randChars.length)){
-						let otherThis = this;
-						otherThis.frameRequest = requestAnimationFrame(animate);
-						
-						parentCallback();
+      element = $(element);
+      let originalText = element.text();
+			/**
+			 * Full fledged class containing the glitch effect,
+			 * Will contain other glitch effects. Where currently
+			 * the only effect is "randomly" glitching each char.
+			 *
+			 * @return {function}
+			 */
+      let TextScramble = (function(){
+        let that = {};
+        function TextScramble (elementRefrence,chars) {
+          if(chars === undefined){
+            that.chars = '!<>-_\\/[]{}—=+*^?#________';
+          }
+          that.element = elementRefrence;
+          that.scrambledText = initalizeScramble();
+        }
+        /**
+         * Random Scramble
+         * @return {[type]}                [description]
+         */
+        function initalizeScramble(){
+          that.originalText = that.element.text();
+          let scrambleSet = []
+          for (var i = 0; i < that.originalText.length; i++) {
+            scrambleSet.push(randomChar())
+          }
+          return scrambleSet;
+        }
+        /**
+         * Randomly return a char from the set of chars defined
+         * @return {String}                [description]
+         */
+        function randomChar() {
+          return that.chars[Math.floor(Math.random() * that.chars.length)];
+        }
+				/**
+				 * Thank you @darrenplace for this module, cleaned up the replace code.
+				 * @param {[type]}                str   [description]
+				 * @param {[type]}                index [description]
+				 * @param {[type]}                chr   [description]
+				 */
+        function setCharAt(str,index,chr) {
+          if(index > str.length-1) return str;
+          return str.substr(0,index) + chr + str.substr(index+1);
+        }
+        function animateChar(index){
+          let dfd = $.Deferred();
+          let timeDiff = Math.floor(Math.random() * 40) + 10;
+          let animateAmount = Math.floor(Math.random() * 2) + 10;
+          // console.log("Determined time diff: ", timeDiff);
+          /**
+           * Animation effect
+           * @return {[type]}                [description]
+           */
+          let intervalSignit = setInterval(function(){
+            if(animateAmount === 0){
+              clearInterval(intervalSignit);
+              dfd.resolve();
+              that.element.text(
+                setCharAt(
+                  that.element.text(),
+                  index,
+                  that.originalText.charAt(index)
+                )
+              );
+            }
+            else{
+              that.element.text(
+                setCharAt(
+                  that.element.text(),
+                  index,
+                  randomChar()
+                )
+              );
+              animateAmount--;
+            }
+          }, timeDiff);
 
 
-						// this.frame;
-					}
-					else{
-						// Out of bounds scope
-					}
-				}
-				animate(callback){
-					let count = 0;
-					for (let index = 0; index < this.charOriginal.length; index++) {
-						// console.log(this.charOriginal.charAt(index));
-						
-						this.animateChar(index, function(){
-							count++;
-							console.log('This Word is now done: ',that.charOriginal, count);
-							if(count === that.charOriginal.length){
-								console.log("This word is now done");
-								callback();
-							}
-						});
-					}
-										
-				}
-				reset(){
-					console.log(this.charOriginal);
-					
-					this.element.text(this.charOriginal);
-				}
-				randomChar() {
-					return this.chars[Math.floor(Math.random() * this.chars.length)];
-				}
+          return dfd.promise();
+        }
+        TextScramble.prototype.getScrambledText = function(){
+          return that.scrambledText.join("");
+        }
+        TextScramble.prototype.animate = function(){
+          let dfd = $.Deferred();
+          let promiseChain = [];
+          /**
+           * Each character is animated on their own timeframe
+           * @param  {[type]}                var [description]
+           * @return {[type]}                    [description]
+           */
+          for (var i = 0; i < element.text().length; i++) {
+            promiseChain.push(animateChar(i));
+          }
+          Promise.all(promiseChain)
+            .then(function(){
+              dfd.resolve();
+            })
+          // dfd.resolve();
+          return dfd.promise();
+        }
+        return TextScramble;
+      })();
+			/**
+			 * Initalize the effect with a reference of the elmeent passed.
+			 * @type {TextScramble}
+			 */
+      let effect = new TextScramble(element)
+			/**
+			 * Change the elements text to a generally scrambled Text
+			 */
+      element.text(effect.getScrambledText());
+			/**
+			 * Animate the glitch effect
+			 */
+      effect.animate()
+        .then(function(){
+					settings.done(element);
+        })
 
-			}
-		
-			// console.log(key, value);
-			value = $(value);
-			// console.log('Ran');
-			// Do something to each element here.
-			let scramble = new TextScramble(value);
-			// console.log(scramble.update());
-			value.text(scramble.randCharsOutput());
-			scramble.animate(function(){
-				scramble.reset();
-			});
-			// value.html('&nbsp;')
-			// const originalText = this.html();
-		});
-
+    });
 	};
-
-
-
-	
-
-
 })(jQuery);
-
-// //  OPTIONS  //
-// (function ( $ ) {
- 
-// 	$.fn.greenify = function( options ) {
- 
-// 		// This is the easiest way to have default options.
-// 		var settings = $.extend({
-// 			// These are the defaults.
-// 			color: "#556b2f",
-// 			backgroundColor: "white"
-// 		}, options );
- 
-// 		// Greenify the collection based on the settings variable.
-// 		return this.css({
-// 			color: settings.color,
-// 			backgroundColor: settings.backgroundColor
-// 		});
- 
-// 	};
- 
-// }( jQuery ));
