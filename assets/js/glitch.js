@@ -1,6 +1,4 @@
 (function($) {
-	/**
-	 * Animates element text.
 
 	$.fn.glitch = function(options) {
 		/**
@@ -45,7 +43,12 @@
           that.originalText = that.element.text();
           let scrambleSet = []
           for (var i = 0; i < that.originalText.length; i++) {
-            scrambleSet.push(randomChar())
+            if(that.originalText[i] === ' '){
+              scrambleSet.push(' ')
+            }
+            else{
+              scrambleSet.push(randomChar())
+            }
           }
           return scrambleSet;
         }
@@ -68,36 +71,51 @@
         }
         function animateChar(index){
           let dfd = $.Deferred();
-          let timeDiff = Math.floor(Math.random() * 40) + 10;
-          let animateAmount = Math.floor(Math.random() * 2) + 10;
+
+          let timeDiff = Math.floor(Math.random() * 80) + 10;
+          let animateAmount = Math.floor(Math.random() * 5) + 10;
+          
           // console.log("Determined time diff: ", timeDiff);
           /**
            * Animation effect
            * @return {[type]}                [description]
            */
-          let intervalSignit = setInterval(function(){
-            if(animateAmount === 0){
-              clearInterval(intervalSignit);
-              dfd.resolve();
-              that.element.text(
+          if(that.originalText[index] === ' '){
+            that.element.text(
                 setCharAt(
                   that.element.text(),
                   index,
                   that.originalText.charAt(index)
                 )
               );
-            }
-            else{
-              that.element.text(
-                setCharAt(
-                  that.element.text(),
-                  index,
-                  randomChar()
-                )
-              );
-              animateAmount--;
-            }
-          }, timeDiff);
+              dfd.resolve();
+          }
+          else{
+            let intervalSignit = setInterval(function(){
+              if(animateAmount === 0){
+                clearInterval(intervalSignit);
+                that.element.text(
+                  setCharAt(
+                    that.element.text(),
+                    index,
+                    that.originalText.charAt(index)
+                  )
+                );
+                dfd.resolve();
+              }
+              else{
+                that.element.text(
+                  setCharAt(
+                    that.element.text(),
+                    index,
+                    randomChar()
+                  )
+                );
+                animateAmount--;
+              }
+            }, timeDiff);
+          }
+
 
 
           return dfd.promise();

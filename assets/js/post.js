@@ -1,11 +1,10 @@
 (function ($) {
-	'use strict';
 
 	// ——————————————————————————————————————————————————
 	// Smooth Scroll / Menu Controller
 	// ——————————————————————————————————————————————————
 
-	jQuery(document).on('ready', function () {
+	$(document).on('ready', function () {
 
 		/*START MENU JS*/
 		$('a.page-scroll').on('click', function (e) {
@@ -20,14 +19,6 @@
 			e.preventDefault();
 		});
 
-		$(window).on('scroll', function () {
-			if ($(this).scrollTop() > 100) {
-				$('.menu-top').addClass('menu-shrink');
-			} else {
-				$('.menu-top').removeClass('menu-shrink');
-			}
-		});
-
 		$(document).on('click', '.navbar-collapse.in', function (e) {
 			if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
 				$(this).collapse('hide');
@@ -36,24 +27,32 @@
 		/*END MENU JS*/
 	});
 
-	// ——————————————————————————————————————————————————
-	// Hero Slideshow
-	// ——————————————————————————————————————————————————
-
-	$(".home_bg").backgroundSlideshow({
-		delay: 3000,
-		transitionDuration: 1000,
-		images: [
-			"./assets/img/heroBG/0.jpg",
-			"./assets/img/heroBG/1.jpg",
-			"./assets/img/heroBG/2.jpg",
-			"./assets/img/heroBG/3.jpg",
-			"./assets/img/heroBG/4.jpg",
-			"./assets/img/heroBG/5.jpg",
-			"./assets/img/heroBG/6.jpg",
-			"./assets/img/heroBG/7.jpg"
-		]
-	})
+	/**
+	 *  @danieltamkin peer programming
+	 */
+	$(document).ready(function(){
+		$(".modal-trigger").click(function(){
+			let element = $(this.className + " .modal-glitch");
+			console.log(element);
+			let attr = $(this).attr('data-src');
+			$(attr + " .modal-glitch").glitch();
+							
+		})
+		$(".glitch").ifVisible({
+			offset: 40,
+			callback: function(element){
+				$(element).glitch();
+			}
+		})
+	});
+	$(window).scroll(function(){
+		$(".glitch").ifVisible({
+			offset: 40,
+			callback: function(element){
+				$(element).glitch();
+			}
+		})
+	});
 
 })(jQuery);
 
