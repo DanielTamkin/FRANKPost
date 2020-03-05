@@ -117,7 +117,7 @@
                 </div>
             </div>
             <div class="row">
-                                <!--Chris-->
+            <!--Chris-->
                                 <div class="col-md-offset-1 col-md-2 col-sm-6 col-xs-6">
                                     <a class="modal-trigger" data-fancybox data-src="#team-chris" data-touch='false' href="javascript:;">
                                         <span class="tema-member">
@@ -136,8 +136,8 @@
                                         </span>
                                     </a>
                                 </div>
-                                <!--End Chris-->
-                                                <!--Lawrence-->
+                <!--End Chris-->
+                <!--Lawrence-->
                 <div class="col-md-2 col-sm-6 col-xs-6">
                     <a class="modal-trigger" data-fancybox data-src="#team-lawrence" data-touch='false' href="javascript:;">
                         <span class="tema-member">
@@ -304,7 +304,7 @@
 -->
 
 <!--Team-Chris-->
-<div class="hidden">
+<div class="modal-hidden">
     <div id="team-chris">
         <div class="lightbox" style="display: inline-block; width: 100%; max-width: 990px; overflow: visible;">
             <div class="row">
@@ -328,7 +328,7 @@
 <!--End Team-Chris-->
 
 <!--Team-Lawrence-->
-<div class="hidden">
+<div class="modal-hidden">
     <div id="team-lawrence">
         <div class="lightbox" style="display: inline-block; width: 100%; max-width: 990px; overflow: visible;">
             <div class="row">
@@ -352,7 +352,7 @@
 <!--End Team-Lawrence-->
 
 <!--Team-Andrew-->
-<div class="hidden">
+<div class="modal-hidden">
     <div id="team-andrew">
         <div class="lightbox" style="display: inline-block; width: 100%; max-width: 990px; overflow: visible;">
             <div class="row">
@@ -376,7 +376,7 @@
 <!--End Team-Andrew-->
 
 <!--Team-Howard-->
-<div class="hidden">
+<div class="modal-hidden">
     <div id="team-howard">
         <div class="lightbox" style="display: inline-block; width: 100%; max-width: 990px; overflow: visible;">
             <div class="row">
@@ -400,7 +400,7 @@
 <!--End Team-Howard-->
 
 <!--Team-Libby-->
-<div class="hidden">
+<div class="modal-hidden">
     <div id="team-libby">
         <div class="lightbox" style="display: inline-block; width: 100%; max-width: 990px; overflow: visible;">
             <div class="row">
@@ -430,7 +430,7 @@
 -->
 
  <!--Dailies-->
- <div class="hidden">
+ <div class="modal-hidden">
     <div id="service-dailies">
         <div class="lightbox" style="display: inline-block; width: 100%; max-width: 990px; overflow: visible;">
             <div class="row">
@@ -466,7 +466,7 @@
 <!--End Dailies-->
 
     <!--Editorial-->
-    <div class="hidden">
+    <div class="modal-hidden">
         <div id="service-editorial">
             <div class="lightbox" style="display: inline-block; width: 100%; max-width: 990px; overflow: visible;">
                 <div class="row">
@@ -500,7 +500,7 @@
     <!--End Editorial-->
 
     <!--Colour-->
-    <div class="hidden">
+    <div class="modal-hidden">
         <div id="service-colour">
             <div class="lightbox" style="display: inline-block; width: 100%; max-width: 990px; overflow: visible;">
                 <div class="row">
@@ -537,7 +537,7 @@
     <!--End Colour-->
 
     <!--Sound-->
-    <div class="hidden">
+    <div class="modal-hidden">
         <div id="service-sound">
             <div class="lightbox" style="display: inline-block; width: 100%; max-width: 990px; overflow: visible;">
                 <div class="row">
@@ -569,7 +569,7 @@
     <!--End Sound-->
 
     <!--VFX / Animation-->
-    <div class="hidden">
+    <div class="modal-hidden">
         <div id="service-vfxanim">
             <div class="lightbox" style="display: inline-block; width: 100%; max-width: 990px; overflow: visible;">
                 <div class="row">
@@ -600,7 +600,7 @@
     <!--End VFX / Animation-->
 
     <!--Delivery-->
-    <div class="hidden">
+    <div class="modal-hidden">
         <div id="service-delivery">
             <div class="lightbox" style="display: inline-block; width: 100%; max-width: 990px; overflow: visible;">
                 <div class="row">
@@ -745,11 +745,19 @@
     <!--init slick-->
     <script>
         $(document).ready(function(){
-            $('.slider').slick({
+            let slider = $('.slider').slick({
                 autoplay: true,
                 autoplaySpeed: 5000,
                 dots: true,
                 arrows: false
+            });
+            // slider.slickGoTo(4,true);
+            console.log(slider);
+            
+            $().fancybox({
+                beforeShow: function(){
+                    console.log('thhhas');
+                }
             });
         });
     </script>
@@ -788,6 +796,7 @@
     </script>
     <!--slide into DMs onLoad-->
     <script>
+
     console.log('🐍')
     </script>
     

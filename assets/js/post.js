@@ -31,13 +31,14 @@
 	 *  @danieltamkin peer programming
 	 */
 	$(document).ready(function(){
+
 		$(".modal-trigger").click(function(){
 			let element = $(this.className + " .modal-glitch");
-			console.log(element);
 			let attr = $(this).attr('data-src');
 			$(attr + " .modal-glitch").glitch();
 							
 		})
+
 		$(".glitch").ifVisible({
 			offset: 40,
 			callback: function(element){
