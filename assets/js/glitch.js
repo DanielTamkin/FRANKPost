@@ -55,7 +55,7 @@
           let dfd = $.Deferred();
 
           let timeDiff = Math.floor(Math.random() * 80) + 10;
-          let animateAmount = Math.floor(Math.random() * 5) + 10;
+          let animateAmount = Math.floor(Math.random() * 4) + 5;
           
           /**
            * Animation effect

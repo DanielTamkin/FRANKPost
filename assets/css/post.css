@@ -104,7 +104,9 @@ p {
 
 .modal-hidden {
 	visibility: hidden;
-	position:absolute;
+	position: absolute;
+	top: -10000px;
+	left: -10000px;
 }
 
 .lightbox {
