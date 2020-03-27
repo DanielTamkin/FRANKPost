@@ -36,7 +36,7 @@
 			let element = $(this.className + " .modal-glitch");
 			let attr = $(this).attr('data-src');
 			$(attr + " .modal-glitch").glitch();
-							
+
 		})
 
 		$(".glitch").ifVisible({
@@ -56,4 +56,3 @@
 	});
 
 })(jQuery);
-
